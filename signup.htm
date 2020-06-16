@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<style>
+    #root{
+        align-items: center;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div id="root">
+        Sign In <br>
+        <input v-model = "email"><br>
+        <button onclick="alert('Signed Up')"
+         v-bind:disabled="email.length < 2 ">
+            Submit
+            </button      
+       
+        
+    </div>
+</body>
+
+
+<script
+src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js">
+</script>
+
+<script>
+    new Vue({
+        el:"#root",
+        data(){
+            return{
+                email: ""
+            }
+        }
+    })
+   
+</script>
